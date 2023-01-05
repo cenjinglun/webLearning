@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy  # 导入扩展类
 from markupsafe import escape
 import click
 
-prefix = "sqlite:///" if sys.platform.startswith("win") else: "sqlite:////"
+prefix = "sqlite:///" if sys.platform.startswith("win") else "sqlite:////"
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = prefix + os.path.join(app.root_path, "data.db")
